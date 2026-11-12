@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+backend/media/
+detector/runs/
+detector/datasets/
+*.pt
+!detector/models/*.pt
+.claude/
+*.log

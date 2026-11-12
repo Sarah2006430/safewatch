@@ -1,0 +1,551 @@
+{
+  "generated_at": "2026-11-12T03:05:01",
+  "models": {
+    "pose": "yolo11n-pose.pt",
+    "fire_smoke": "models/fire_smoke_yolo11n.pt",
+    "person_conf": 0.15,
+    "fire_smoke_metrics": {
+      "mAP50": 0.428,
+      "mAP50_95": 0.206,
+      "val_images": 800,
+      "train_images": 3000,
+      "epochs": 12,
+      "imgsz": 320
+    },
+    "pose_imgsz": 480,
+    "fire_smoke_imgsz": 320
+  },
+  "results": [
+    {
+      "suite": "falls",
+      "title": "Person fall",
+      "dataset": "UR Fall Detection Dataset (Univ. of Rzeszow)",
+      "positives": 30,
+      "detected": 23,
+      "recall": 0.767,
+      "negatives": 15,
+      "false_alarm_clips": 2,
+      "false_alarm_rate": 0.133,
+      "clips": {
+        "positive": [
+          {
+            "clip": "fall-01-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.89
+          },
+          {
+            "clip": "fall-02-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.94
+          },
+          {
+            "clip": "fall-03-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.8
+          },
+          {
+            "clip": "fall-04-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.91
+          },
+          {
+            "clip": "fall-05-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.86
+          },
+          {
+            "clip": "fall-06-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.89
+          },
+          {
+            "clip": "fall-07-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.97
+          },
+          {
+            "clip": "fall-08-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.95
+          },
+          {
+            "clip": "fall-09-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.9
+          },
+          {
+            "clip": "fall-10-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.9
+          },
+          {
+            "clip": "fall-11-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.94
+          },
+          {
+            "clip": "fall-12-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-13-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.92
+          },
+          {
+            "clip": "fall-14-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.92
+          },
+          {
+            "clip": "fall-15-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.93
+          },
+          {
+            "clip": "fall-16-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.91
+          },
+          {
+            "clip": "fall-17-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-18-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.81
+          },
+          {
+            "clip": "fall-19-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-20-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-21-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-22-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.81
+          },
+          {
+            "clip": "fall-23-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-24-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.88
+          },
+          {
+            "clip": "fall-25-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.89
+          },
+          {
+            "clip": "fall-26-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.85
+          },
+          {
+            "clip": "fall-27-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "fall-28-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.76
+          },
+          {
+            "clip": "fall-29-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.89
+          },
+          {
+            "clip": "fall-30-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.82
+          }
+        ],
+        "negative": [
+          {
+            "clip": "adl-01-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-02-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-03-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-04-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-05-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-06-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-07-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-08-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-09-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-10-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.7
+          },
+          {
+            "clip": "adl-11-cam0.mp4",
+            "alerts": 1,
+            "confidence": 0.77
+          },
+          {
+            "clip": "adl-12-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-13-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-14-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "adl-15-cam0.mp4",
+            "alerts": 0,
+            "confidence": 0
+          }
+        ]
+      }
+    },
+    {
+      "suite": "fire",
+      "title": "Fire",
+      "dataset": "FIRESENSE flame videos (CERTH / Bilkent, CC-BY 4.0)",
+      "positives": 11,
+      "detected": 9,
+      "recall": 0.818,
+      "negatives": 16,
+      "false_alarm_clips": 3,
+      "false_alarm_rate": 0.188,
+      "clips": {
+        "positive": [
+          {
+            "clip": "posVideo1.868.avi",
+            "alerts": 2,
+            "confidence": 0.52
+          },
+          {
+            "clip": "posVideo10.869.avi",
+            "alerts": 7,
+            "confidence": 0.59
+          },
+          {
+            "clip": "posVideo11.870.avi",
+            "alerts": 2,
+            "confidence": 0.45
+          },
+          {
+            "clip": "posVideo2.871.avi",
+            "alerts": 16,
+            "confidence": 0.59
+          },
+          {
+            "clip": "posVideo3.872.avi",
+            "alerts": 5,
+            "confidence": 0.48
+          },
+          {
+            "clip": "posVideo4.873.avi",
+            "alerts": 44,
+            "confidence": 0.55
+          },
+          {
+            "clip": "posVideo5.874.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "posVideo6.875.avi",
+            "alerts": 18,
+            "confidence": 0.71
+          },
+          {
+            "clip": "posVideo7.876.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "posVideo8.877.avi",
+            "alerts": 19,
+            "confidence": 0.5
+          },
+          {
+            "clip": "posVideo9.878.avi",
+            "alerts": 21,
+            "confidence": 0.61
+          }
+        ],
+        "negative": [
+          {
+            "clip": "negsVideo1.858.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo10.1072.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo11.1073.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo12.1074.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo13.1075.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo14.1076.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo15.1078.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo16.1077.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo2.859.avi",
+            "alerts": 5,
+            "confidence": 0.69
+          },
+          {
+            "clip": "negsVideo3.860.avi",
+            "alerts": 1,
+            "confidence": 0.45
+          },
+          {
+            "clip": "negsVideo4.861.avi",
+            "alerts": 1,
+            "confidence": 0.48
+          },
+          {
+            "clip": "negsVideo5.862.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo6.863.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo7.864.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo8.865.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "negsVideo9.866.avi",
+            "alerts": 0,
+            "confidence": 0
+          }
+        ]
+      },
+      "baseline": {
+        "method": "OpenCV colour/motion heuristic",
+        "detected": 11,
+        "false_alarm_clips": 11
+      }
+    },
+    {
+      "suite": "smoke",
+      "title": "Smoke",
+      "dataset": "FIRESENSE smoke videos (CERTH / Bilkent, CC-BY 4.0)",
+      "positives": 13,
+      "detected": 9,
+      "recall": 0.692,
+      "negatives": 9,
+      "false_alarm_clips": 0,
+      "false_alarm_rate": 0.0,
+      "clips": {
+        "positive": [
+          {
+            "clip": "testpos01.817.avi",
+            "alerts": 8,
+            "confidence": 0.72
+          },
+          {
+            "clip": "testpos02.818.avi",
+            "alerts": 2,
+            "confidence": 0.39
+          },
+          {
+            "clip": "testpos03.819.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testpos04.820.avi",
+            "alerts": 19,
+            "confidence": 0.85
+          },
+          {
+            "clip": "testpos05.821.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testpos06.822.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testpos07.823.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testpos08.824.avi",
+            "alerts": 1,
+            "confidence": 0.48
+          },
+          {
+            "clip": "testpos09.825.avi",
+            "alerts": 18,
+            "confidence": 0.72
+          },
+          {
+            "clip": "testpos10.826.avi",
+            "alerts": 15,
+            "confidence": 0.83
+          },
+          {
+            "clip": "testpos11.827.avi",
+            "alerts": 19,
+            "confidence": 0.74
+          },
+          {
+            "clip": "testpos12.828.avi",
+            "alerts": 6,
+            "confidence": 0.6
+          },
+          {
+            "clip": "testpos13.829.avi",
+            "alerts": 9,
+            "confidence": 0.57
+          }
+        ],
+        "negative": [
+          {
+            "clip": "testneg01.807.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg02.808.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg03.809.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg04.810.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg05.811.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg06.812.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg07.813.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg08.814.avi",
+            "alerts": 0,
+            "confidence": 0
+          },
+          {
+            "clip": "testneg09.815.avi",
+            "alerts": 0,
+            "confidence": 0
+          }
+        ]
+      },
+      "baseline": {
+        "method": "OpenCV colour/motion heuristic",
+        "detected": 5,
+        "false_alarm_clips": 0
+      }
+    }
+  ]
+}

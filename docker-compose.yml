@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: emergency
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d emergency"]
+      interval: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/emergency
+      DETECTOR_API_KEY: ${DETECTOR_API_KEY:-detector-secret-key}
+      JWT_SECRET: ${JWT_SECRET:-change-this-secret-in-production}
+      CORS_ORIGINS: http://localhost:8080,http://localhost:5173
+    volumes: [media:/app/media]
+    ports: ["8000:8000"]
+    depends_on:
+      db: { condition: service_healthy }
+
+  detector:
+    build: ./detector
+    environment:
+      BACKEND_URL: http://backend:8000
+      DETECTOR_API_KEY: ${DETECTOR_API_KEY:-detector-secret-key}
+    ports: ["8100:8100"]
+    depends_on: [backend]
+    # Webcams are not reachable from Docker on Windows/macOS - use RTSP cameras,
+    # or run the detector natively (see README).
+
+  frontend:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on: [backend]
+
+volumes:
+  pgdata:
+  media:
