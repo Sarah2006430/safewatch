@@ -8,9 +8,9 @@
    Colour is reserved for signal/state. Default theme: light (sky blue).
    ------------------------------------------------------------------ */
 @theme {
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-sans: "Google Sans Variable", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
-  --font-display: "Chakra Petch", "Plus Jakarta Sans", sans-serif;
+  --font-display: "Google Sans Variable", ui-sans-serif, sans-serif;
 
   --radius-sm: 2px;
   --radius-md: 3px;
