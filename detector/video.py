@@ -42,6 +42,7 @@ class FrameReader(threading.Thread):
     def run(self):
         backoff = 2
         cap = None
+        slow_reads = 0
         while not self._stop_evt.is_set():
             if cap is None or not cap.isOpened():
                 cap = self._open()
@@ -59,7 +60,22 @@ class FrameReader(threading.Thread):
                 fps = cap.get(cv2.CAP_PROP_FPS) or 25
                 delay = 1.0 / fps if self.is_file and fps > 0 else 0
 
+            t_read = time.time()
             ok, frame = cap.read()
+            if self.source.isdigit() and ok:
+                # A stuck webcam driver keeps returning ok=True about once a second with an
+                # uninitialised buffer (black, or leftover frames from other cameras).
+                # Several slow reads in a row means the device is stuck: reconnect it.
+                slow_reads = slow_reads + 1 if time.time() - t_read > 0.7 else 0
+                if slow_reads >= 3:
+                    slow_reads = 0
+                    self.connected = False
+                    self.error = "Webcam stalled, reconnecting"
+                    log.warning("[webcam %s] %s", self.source, self.error)
+                    cap.release()
+                    cap = None
+                    self._stop_evt.wait(1)
+                    continue
             if not ok or frame is None:
                 if self.is_file:
                     cap.set(cv2.CAP_PROP_POS_FRAMES, 0)  # loop demo videos
